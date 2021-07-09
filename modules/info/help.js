@@ -22,7 +22,7 @@ module.exports.run = (client, msg, args, config) => {
        
         let i = client.commands.get(query)
         let commandEmbed = new RichEmbed()
-        .setDescription(`Name: **${i.help.name}**\nDesc: ${i.help.desc}\nExample: ${i.help.example}\nownerOnly: ${i.help.ownerOnly ? "true" : "false"}`)
+        .setDescription(` <a:zZ_purplemoon:861635997917118495>  Name: **${i.help.name}**\nDesc: ${i.help.desc}\nExample: ${i.help.example}\nownerOnly: ${i.help.ownerOnly ? "true" : "false"} <a:zZ_purplemoon:861635997917118495> `)
         .setColor("RANDOM")
         msg.channel.send(commandEmbed)
     } else if(array.includes(query)) {
@@ -30,7 +30,7 @@ module.exports.run = (client, msg, args, config) => {
         const commands = client.commands.filter(obj => obj.help.group === query)
         
         let commandsEmbed = new RichEmbed()
-        .setDescription(commands.map(i => '`' + i.help.name + '`').join(" "))
+        .setDescription( <a:zZ_purplemoon:861635997917118495>  commands.map(i => '`' + i.help.name + '`').join(" ") <a:zZ_purplemoon:861635997917118495>)
         .setColor("RANDOM")
 
         msg.channel.send(commandsEmbed)
